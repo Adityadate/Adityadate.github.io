@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditya Date | Data Scientist and Data Center Entrepreneur</title>
+<meta name="description" content="Aditya Date, M.Sc. Data Science student at Universität Trier. Looking for a Werkstudent role in data science. Data center entrepreneur seeking an investor for land.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f14; --bg2:#10161d; --card:#131a22; --line:#22303c;
+  --text:#e8edf2; --mute:#8fa1b1; --accent:#5eead4; --accent2:#fbbf24;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-family:var(--mono);font-size:14px;color:var(--accent);text-decoration:none}
+.links{display:flex;gap:22px;font-size:14px;color:var(--mute)}
+.links a{text-decoration:none}.links a:hover{color:var(--text)}
+@media(max-width:760px){.links{display:none}}
+.toggle{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;font-family:var(--mono);font-size:12px}
+.toggle button{background:none;border:0;color:var(--mute);padding:6px 12px;border-radius:999px;cursor:pointer;font:inherit}
+.toggle button.on{background:var(--accent);color:#04201c}
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#racks{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(11,15,20,.2),var(--bg) 78%)}
+.hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:104px}
+.tag{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.04em}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,7vw,76px);line-height:1.05;margin:18px 0 22px;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--accent2);font-weight:400}
+.lead{font-size:clamp(17px,2vw,20px);color:#c4d0db;max-width:640px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line)}
+.btn.p{background:var(--accent);color:#04201c;border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--mute)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(94,234,212,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(94,234,212,0)}100%{box-shadow:0 0 0 0 rgba(94,234,212,0)}}
+/* sections */
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,40px);margin:10px 0 18px;letter-spacing:-.01em}
+p.sub{color:var(--mute);max-width:660px;margin-bottom:34px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:#34505a;transform:translateY(-2px)}
+.card h3{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:8px}
+.card p{color:#b4c1cd;font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--mono);font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--accent)}
+.meta{font-family:var(--mono);font-size:12px;color:var(--mute);margin-bottom:10px}
+/* thesis */
+.thesis{background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;margin:10px 0 36px}
+@media(max-width:820px){.pair{grid-template-columns:1fr}.pair .x{display:none}}
+.pair .x{align-self:center;font-family:var(--serif);font-size:38px;color:var(--accent2)}
+.factors{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.factor{border-left:2px solid var(--accent);padding:4px 0 4px 14px}
+.factor b{display:block;font-family:var(--mono);font-size:13px;color:var(--accent2);font-weight:500}
+.factor span{color:#b4c1cd;font-size:14.5px}
+.invest{margin-top:36px;border:1px solid var(--accent2);border-radius:14px;padding:26px;background:rgba(251,191,36,.05)}
+.invest h3{font-family:var(--serif);font-size:23px;margin-bottom:8px}
+/* skills */
+.skillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.skill{background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:10px;font-size:14.5px}
+/* timeline */
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.tl .item{position:relative;padding:0 0 30px 26px}
+.tl .item::before{content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.tl h3{font-size:18px;font-weight:600}
+.tl .meta{margin:2px 0 6px}
+.tl p{color:#b4c1cd;font-size:15.5px;max-width:700px}
+/* contact */
+.contact a.row{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.contact a.row:hover span:last-child{color:var(--accent)}
+.contact .row span:first-child{font-family:var(--mono);font-size:13px;color:var(--mute)}
+footer{padding:36px 0;color:var(--mute);font-size:13px;font-family:var(--mono)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.f{background:none;border:1px solid var(--line);color:var(--mute);padding:7px 14px;border-radius:999px;font:500 13px var(--sans);cursor:pointer}
+.f.on{background:var(--accent);border-color:var(--accent);color:#04201c}
+.proj.feat{grid-column:1/-1;border-color:#34505a;background:linear-gradient(135deg,var(--card),#10222a)}
+.proj.feat h3{font-size:25px}
+.plink{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:13px;color:var(--accent);text-decoration:none}
+.plink:hover{text-decoration:underline}
+.proj.hide{display:none}
+/* audience mode */
+body[data-mode="recruiter"] .only-investor{display:none}
+body[data-mode="investor"] .only-recruiter{display:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.dot{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body data-mode="recruiter">
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">~/aditya-date</a>
+  <div class="links"><a href="#about">About</a><a href="#thesis">Data x Data Centers</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  <div class="toggle" role="group" aria-label="Choose your view">
+    <button id="mR" class="on" type="button">Recruiter</button>
+    <button id="mI" type="button">Investor</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="racks" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="tag">M.Sc. DATA SCIENCE &middot; UNIVERSITÄT TRIER</div>
+    <h1>I turn data into decisions, and <em>land into data centers.</em></h1>
+    <p class="lead only-recruiter">I am Aditya Date, a data science master's student in Trier with hands-on experience in REST APIs, Docker, dashboards and LLM evaluation. I am looking for a Werkstudent role where I can contribute from week one and keep learning fast.</p>
+    <p class="lead only-investor">I am Aditya Date, a data scientist and data center entrepreneur. I am looking for a company or investor interested in developing a data center on my land, with a data-driven approach to site decisions.</p>
+    <div class="cta">
+      <a class="btn p only-recruiter" href="#projects">See my work</a>
+      <a class="btn p only-investor" href="#thesis">See the land opportunity</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+    <div class="status"><span class="dot"></span><span class="only-recruiter">Available: up to 20 hours per week &middot; relocation possible</span><span class="only-investor">Open to investor and partner conversations</span></div>
+  </div>
+</header>
+
+<section id="about"><div class="wrap">
+  <div class="eyebrow reveal">01 / About</div>
+  <h2 class="reveal">Who I am</h2>
+  <div class="grid g3">
+    <div class="card reveal"><h3>The student</h3><p>M.Sc. Data Science at Universität Trier since April 2026, expected completion 2028. I am building a strong base in data science while working on practical projects.</p></div>
+    <div class="card reveal"><h3>The builder</h3><p>At Winjit I built REST APIs and worked with Docker, including creating and upgrading images and deploying them. I care about work that actually ships.</p></div>
+    <div class="card reveal"><h3>The entrepreneur</h3><p>I am an active data center entrepreneur, looking for a company that can invest in my land for a data center. It gives me a business view on infrastructure, energy and long-term planning.</p></div>
+  </div>
+  <div class="card reveal" style="margin-top:18px"><h3>My goal</h3><p>Short term: a working student job in the data science sector in Germany, ideally in a team where I can apply my skills and learn from experienced colleagues. Long term: to combine data science and digital infrastructure, from analysis to real projects on the ground.</p></div>
+</div></section>
+
+<section id="thesis" class="thesis"><div class="wrap">
+  <div class="eyebrow reveal">02 / What makes this portfolio different</div>
+  <h2 class="reveal">Data science x data centers</h2>
+  <p class="sub reveal">Most data scientists work on the data that data centers store. I also work on where data centers should exist. A site decision is a data problem, and this is how I think about it.</p>
+  <div class="pair">
+    <div class="card reveal"><div class="meta">THE ANALYST</div><h3>Data science</h3><p>Structured thinking, dashboards, APIs and model evaluation, used to turn messy inputs into clear decisions.</p></div>
+    <div class="x">&times;</div>
+    <div class="card reveal"><div class="meta">THE FOUNDER</div><h3>Data center development</h3><p>A real land asset and a real goal: finding the right partner to build digital infrastructure on it.</p></div>
+  </div>
+  <div class="eyebrow reveal" style="margin-bottom:14px">Questions every site decision depends on</div>
+  <div class="factors reveal">
+    <div class="factor"><b>POWER</b><span>Capacity, price and grid connection</span></div>
+    <div class="factor"><b>CONNECTIVITY</b><span>Fiber routes and latency to users</span></div>
+    <div class="factor"><b>COOLING</b><span>Climate and water or air options</span></div>
+    <div class="factor"><b>REGULATION</b><span>Permits, zoning and compliance</span></div>
+    <div class="factor"><b>RISK</b><span>Location, resilience and long-term demand</span></div>
+  </div>
+  <div class="invest reveal only-investor">
+    <h3>Looking for a partner for my land</h3>
+    <p style="color:#d6dee6">I am actively searching for a company that can invest in my land for a data center. If you develop, operate or fund data center projects, I would be glad to share the details of the site and talk about how we could work together.</p>
+    <div class="cta"><a class="btn p" href="#contact">Start a conversation</a></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="eyebrow reveal">03 / Skills</div>
+  <h2 class="reveal">What I work with</h2>
+  <div class="reveal"><div class="meta">DATA SCIENCE AND ML</div><div class="skillrow"><span class="skill">Python</span><span class="skill">pandas</span><span class="skill">NumPy</span><span class="skill">scikit-learn</span><span class="skill">Random Forest</span><span class="skill">Jupyter</span><span class="skill">LLM and NLP evaluation</span></div></div>
+  <div class="reveal" style="margin-top:26px"><div class="meta">VISUALIZATION AND DASHBOARDS</div><div class="skillrow"><span class="skill">Power BI</span><span class="skill">Streamlit</span><span class="skill">folium (maps)</span><span class="skill">matplotlib</span><span class="skill">seaborn</span></div></div>
+  <div class="reveal" style="margin-top:26px"><div class="meta">ENGINEERING</div><div class="skillrow"><span class="skill">REST APIs</span><span class="skill">Docker (build, upgrade, deploy)</span><span class="skill">Reproducible setups (virtualenv, requirements.txt)</span></div></div>
+  <div class="reveal" style="margin-top:26px"><div class="meta">LANGUAGES</div><div class="skillrow"><span class="skill">German (B2)</span></div></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="eyebrow reveal">04 / Experience</div>
+  <h2 class="reveal">Where I have worked</h2>
+  <div class="tl">
+    <div class="item reveal"><h3>Winjit</h3><div class="meta">SOFTWARE AND DEPLOYMENT</div><p>Built REST APIs, created and upgraded Docker images, and handled deployment.</p></div>
+    <div class="item reveal"><h3>Outlier AI</h3><div class="meta">FREELANCE</div><p>Freelance evaluation of large language model and NLP outputs.</p></div>
+    <div class="item reveal"><h3>Data center development</h3><div class="meta">ENTREPRENEURSHIP</div><p>Active founder-side work on bringing a data center to my land, including the search for an investment partner.</p></div>
+  </div>
+  <div class="eyebrow reveal" style="margin-top:20px">Education</div>
+  <div class="tl" style="margin-top:14px"><div class="item reveal"><h3>M.Sc. Data Science, Universität Trier</h3><div class="meta">APRIL 2026 TO EXPECTED 2028</div><p>Master's programme in data science in Trier, Germany.</p></div></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="eyebrow reveal">05 / Projects</div>
+  <h2 class="reveal">Selected work</h2>
+  <div class="filters reveal" role="group" aria-label="Filter projects">
+    <button type="button" class="f on" data-f="all">All</button>
+    <button type="button" class="f" data-f="ds">Data science and ML</button>
+    <button type="button" class="f" data-f="an">Analytics and dashboards</button>
+    <button type="button" class="f" data-f="en">Engineering</button>
+  </div>
+  <div class="grid g2" id="pgrid">
+    <div class="card reveal proj feat" data-cat="ds an"><div class="meta">FEATURED &middot; ML AND DASHBOARD</div><h3>EV charging-station failure prediction and spatial dashboard</h3><p>Two independent projects built as a data science portfolio for the eMobility sector. The first predicts charging-station failures with a Random Forest model. The second is a Streamlit dashboard that maps station telemetry on an interactive map and charts voltage and temperature over time. Both come with a script that generates sample data and a reproducible setup.</p><div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Random Forest</span><span class="chip">Streamlit</span><span class="chip">folium</span><span class="chip">pandas</span><span class="chip">seaborn</span></div><a class="plink" href="https://github.com/Adityadate/ionity-data-science">View on GitHub &rarr;</a></div>
+    <div class="card reveal proj " data-cat="an"><div class="meta">DASHBOARD</div><h3>Energy Market Dashboard</h3><p>A Power BI dashboard on the energy market, built as a static version and an interactive version so different audiences can explore the data in the way that suits them.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">Data visualization</span></div></div>
+    <div class="card reveal proj " data-cat="ds"><div class="meta">MACHINE LEARNING</div><h3>Customer churn prediction</h3><p>A churn prediction analysis for customers, worked through in a Jupyter notebook.</p><div class="chips"><span class="chip">Python</span><span class="chip">Jupyter</span><span class="chip">Classification</span></div><a class="plink" href="https://github.com/Adityadate/Customer-churn-prediction">View on GitHub &rarr;</a></div>
+    <div class="card reveal proj " data-cat="ds"><div class="meta">DEEP LEARNING</div><h3>GAN artifact restoration</h3><p>A GAN-based artifact restoration project in Python, published open source under the MIT license.</p><div class="chips"><span class="chip">Python</span><span class="chip">GAN</span><span class="chip">MIT license</span></div><a class="plink" href="https://github.com/Adityadate/gan-artifact-restoration">View on GitHub &rarr;</a></div>
+    <div class="card reveal proj " data-cat="ds an"><div class="meta">DATA QUALITY</div><h3>Master data quality validation</h3><p>A Python project on validating the quality of master data. Details are in the repository.</p><div class="chips"><span class="chip">Python</span><span class="chip">Data quality</span></div><a class="plink" href="https://github.com/Adityadate/MasterDataQualityValidation">View on GitHub &rarr;</a></div>
+    <div class="card reveal proj " data-cat="an en"><div class="meta">SEO AND INTEGRATION</div><h3>Black Beauty Hair DHL Packet Shop</h3><p>An SEO optimization and multi-platform integration project for an online packet shop. The repository is organized into analytics, automations, a dashboard, integrations, an SEO audit and a Shopify integration, with written project documentation.</p><div class="chips"><span class="chip">SEO</span><span class="chip">Integrations</span><span class="chip">Analytics</span><span class="chip">Automation</span></div><a class="plink" href="https://github.com/Adityadate/black-beauty-hair-dhl">View on GitHub &rarr;</a></div>
+    <div class="card reveal proj " data-cat="en"><div class="meta">APIS AND DEPLOYMENT</div><h3>REST APIs and Docker at Winjit</h3><p>Designed and built REST APIs, and worked on Docker image creation, upgrades and deployment.</p><div class="chips"><span class="chip">REST API</span><span class="chip">Docker</span></div></div>
+    <div class="card reveal proj " data-cat="ds"><div class="meta">AI QUALITY</div><h3>LLM and NLP evaluation</h3><p>Freelance work assessing the quality of language model outputs.</p><div class="chips"><span class="chip">LLM</span><span class="chip">NLP</span></div></div>
+    <div class="card reveal proj " data-cat="ds an"><div class="meta">EXPLORATORY ANALYSIS</div><h3>Titanic exploratory data analysis</h3><p>An exploratory data analysis notebook with a documented list of dependencies, a good example of my analysis fundamentals.</p><div class="chips"><span class="chip">Python</span><span class="chip">Jupyter</span><span class="chip">EDA</span></div><a class="plink" href="https://github.com/Adityadate/EDA-Titanic-Analysis">View on GitHub &rarr;</a></div>
+    <div class="card reveal proj " data-cat="an"><div class="meta">HACKATHON</div><h3>Insurance hackathon</h3><p>Took part in an insurance-focused hackathon, working on a data problem under time pressure in a team.</p><div class="chips"><span class="chip">Teamwork</span><span class="chip">Data</span></div></div>
+  </div>
+  <p class="sub reveal" style="margin-top:26px">All public code is on <a href="https://github.com/Adityadate" style="color:var(--accent)">github.com/Adityadate</a>.</p>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="eyebrow reveal">06 / Contact</div>
+  <h2 class="reveal">Let us talk</h2>
+  <p class="sub reveal">Whether you are hiring a working student or looking at land for a data center, I would like to hear from you. Based in Trier, Germany.</p>
+  <div class="reveal">
+    <a class="row" href="mailto:dateaditya.1@gmail.com"><span>EMAIL</span><span>dateaditya.1@gmail.com</span></a>
+    <a class="row" href="tel:+4915252974259"><span>PHONE</span><span>+49 15252 974259</span></a>
+    <a class="row" href="https://www.linkedin.com/in/adityadate917"><span>LINKEDIN</span><span>linkedin.com/in/adityadate917</span></a>
+    <a class="row" href="https://github.com/Adityadate"><span>GITHUB</span><span>github.com/Adityadate</span></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Aditya Date &middot; Trier, Germany &middot; 2026</div></footer>
+
+<script>
+(function(){
+  var body=document.body;
+  function setMode(m){
+    body.setAttribute('data-mode',m);
+    document.getElementById('mR').classList.toggle('on',m==='recruiter');
+    document.getElementById('mI').classList.toggle('on',m==='investor');
+  }
+  document.getElementById('mR').onclick=function(){setMode('recruiter')};
+  document.getElementById('mI').onclick=function(){setMode('investor')};
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+    document.querySelectorAll('.f').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('.f').forEach(function(x){x.classList.toggle('on',x===b)});
+    var f=b.getAttribute('data-f');
+    document.querySelectorAll('.proj').forEach(function(p){
+      var show=f==='all'||(' '+p.getAttribute('data-cat')+' ').indexOf(' '+f+' ')>-1;
+      p.classList.toggle('hide',!show);
+    });
+  }});
+
+  // server rack LED field
+  var c=document.getElementById('racks'),ctx=c.getContext('2d'),W,H,racks=[];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){
+    var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;
+    W=c.width=r.width*d;H=c.height=r.height*d;ctx.setTransform(1,0,0,1,0,0);ctx.scale(d,d);W=r.width;H=r.height;
+    racks=[];var rw=46,gap=16,cols=Math.ceil(W/(rw+gap))+1;
+    for(var i=0;i<cols;i++){
+      var leds=[];for(var j=0;j<Math.floor(H/14);j++)leds.push({p:Math.random()*6.28,s:.5+Math.random()*2.5,on:Math.random()>.35,hue:Math.random()>.85});
+      racks.push({x:i*(rw+gap),w:rw,leds:leds});
+    }
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    racks.forEach(function(r){
+      ctx.strokeStyle='rgba(94,234,212,.10)';ctx.lineWidth=1;ctx.strokeRect(r.x+.5,10,r.w,H-20);
+      r.leds.forEach(function(l,k){
+        if(!l.on)return;
+        var a=.2+.8*Math.max(0,Math.sin(t/1000*l.s+l.p));
+        ctx.fillStyle=l.hue?'rgba(251,191,36,'+a+')':'rgba(94,234,212,'+a+')';
+        ctx.fillRect(r.x+8,18+k*14,r.w-16,3);
+      });
+    });
+    if(!reduce)requestAnimationFrame(draw);
+  }
+  size();draw(0);
+  window.addEventListener('resize',function(){size();if(reduce)draw(0)});
+})();
+</script>
+</body>
+</html>
