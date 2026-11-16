@@ -100,6 +100,64 @@ footer{padding:36px 0;color:var(--mute);font-size:13px;font-family:var(--mono)}
 .plink{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:13px;color:var(--accent);text-decoration:none}
 .plink:hover{text-decoration:underline}
 .proj.hide{display:none}
+/* land */
+section{scroll-margin-top:64px}
+.land{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;border:1px solid var(--accent2);color:var(--accent2);padding:5px 12px;border-radius:999px;margin-bottom:6px}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:8px 0 38px}
+@media(max-width:900px){.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+.stat b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--accent)}
+.stat small{display:block;margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--mute);text-transform:uppercase}
+.mapwrap{display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:stretch}
+@media(max-width:900px){.mapwrap{grid-template-columns:1fr}}
+.map{background:#0e151c;border:1px solid var(--line);border-radius:14px;padding:10px;position:relative}
+.map svg{width:100%;height:auto;display:block}
+.map .cap{font-family:var(--mono);font-size:11px;color:var(--mute);padding:8px 6px 2px}
+.layers{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.layers button{background:none;border:1px solid var(--line);color:var(--mute);padding:7px 13px;border-radius:999px;font:500 13px var(--sans);cursor:pointer}
+.layers button.on{background:var(--accent);border-color:var(--accent);color:#04201c}
+.info{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.info h3{font-family:var(--serif);font-size:22px;margin-bottom:6px}
+.info .st{display:inline-block;font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:999px;margin-bottom:12px;border:1px solid var(--accent);color:var(--accent)}
+.info .st.warn{border-color:var(--accent2);color:var(--accent2)}
+.info ul{list-style:none}
+.info li{padding:8px 0 8px 18px;position:relative;color:#c4d0db;font-size:15px;border-top:1px solid var(--line)}
+.info li::before{content:"";position:absolute;left:0;top:17px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.lyr{opacity:0;transition:opacity .35s;pointer-events:none}
+.lyr.show{opacity:1}
+.base{opacity:1}
+@keyframes ring{0%{r:10;opacity:.9}100%{r:34;opacity:0}}
+.pulse{animation:ring 2.2s infinite}
+@keyframes flow{to{stroke-dashoffset:-24}}
+.flow{stroke-dasharray:8 8;animation:flow 1.2s linear infinite}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0}
+@media(max-width:900px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.why{grid-template-columns:1fr}}
+.why .card h3{font-size:19px}
+.why .ic{font-family:var(--mono);font-size:12px;color:var(--accent2);margin-bottom:8px;display:block}
+.fit{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:40px}
+.mw{position:relative;height:46px;margin:20px 0 6px;border-radius:10px;background:#0e151c;border:1px solid var(--line);overflow:hidden}
+.mw i{position:absolute;left:25%;right:0;top:0;bottom:0;background:linear-gradient(90deg,rgba(94,234,212,.15),rgba(94,234,212,.55));border-left:2px solid var(--accent)}
+.mwl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs button{background:none;border:1px solid var(--line);color:var(--mute);padding:8px 14px;border-radius:8px;font:500 13.5px var(--sans);cursor:pointer}
+.tabs button.on{border-color:var(--accent);color:var(--accent)}
+.tp{display:none}.tp.on{display:block}
+.dl{display:grid;grid-template-columns:200px 1fr;border-top:1px solid var(--line)}
+.dl>*{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.dl dt{font-family:var(--mono);font-size:12.5px;color:var(--mute)}
+.dl dd{color:#d6dee6}
+@media(max-width:560px){.dl{grid-template-columns:1fr}.dl dt{padding-bottom:0;border-bottom:0}}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.docs div{border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14.5px;background:var(--card)}
+.docs div::before{content:"\2713";color:var(--accent);margin-right:10px;font-weight:700}
+.owner{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border:1px solid var(--accent2);background:rgba(251,191,36,.05);border-radius:14px;padding:24px;margin:34px 0 20px}
+.owner h3{font-family:var(--serif);font-size:22px}
+.owner p{color:#c4d0db;font-size:15px}
+.owner .cta{margin-top:0}
+.fine{color:var(--mute);font-size:12.5px;line-height:1.6;max-width:820px}
 /* audience mode */
 body[data-mode="recruiter"] .only-investor{display:none}
 body[data-mode="investor"] .only-recruiter{display:none}
@@ -112,7 +170,7 @@ body[data-mode="investor"] .only-recruiter{display:none}
 
 <nav><div class="wrap">
   <a class="logo" href="#top">~/aditya-date</a>
-  <div class="links"><a href="#about">About</a><a href="#thesis">Data x Data Centers</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#about">About</a><a href="#thesis">Data x Data Centers</a><a class="only-investor" href="#land">The Land</a><a href="#skills">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
   <div class="toggle" role="group" aria-label="Choose your view">
     <button id="mR" class="on" type="button">Recruiter</button>
     <button id="mI" type="button">Investor</button>
@@ -170,8 +228,166 @@ body[data-mode="investor"] .only-recruiter{display:none}
   <div class="invest reveal only-investor">
     <h3>Looking for a partner for my land</h3>
     <p style="color:#d6dee6">I am actively searching for a company that can invest in my land for a data center. If you develop, operate or fund data center projects, I would be glad to share the details of the site and talk about how we could work together.</p>
-    <div class="cta"><a class="btn p" href="#contact">Start a conversation</a></div>
+    <div class="cta"><a class="btn p" href="#land">View the site details</a><a class="btn" href="#contact">Start a conversation</a></div>
   </div>
+</div></section>
+
+<section id="land" class="land only-investor"><div class="wrap">
+  <div class="eyebrow reveal">The land</div>
+  <h2 class="reveal">9.25 acres, power on site, Nashik</h2>
+  <div class="reveal"><span class="badge"><span class="dot"></span>Available from 2028 &middot; lease or joint development</span></div>
+  <p class="sub reveal">Gat No. 17, Mahiravani (Talegaon), Nashik, Maharashtra, with direct frontage on the Nashik-Trimbak Road. A contiguous, non-agricultural plot with a live HT connection, suited to edge, disaster recovery, enterprise colocation and AI inference capacity for the Mumbai, Pune and Nashik industrial belt.</p>
+
+  <div class="stats reveal">
+    <div class="stat"><b><span data-count="9.25" data-dec="2">9.25</span> ac</b><small>Contiguous plot, about 37,430 m&sup2;</small></div>
+    <div class="stat"><b>NA</b><small>Commercial and industrial use</small></div>
+    <div class="stat"><b>&lt; 1 km</b><small>To MSEDCL substation</small></div>
+    <div class="stat"><b>HT live</b><small>Supply on site, MSEDCL letter in hand</small></div>
+    <div class="stat"><b><span data-count="8">8</span> km</b><small>To Nashik city centre</small></div>
+    <div class="stat"><b><span data-count="2028" data-from="2020">2028</span></b><small>Available for handover</small></div>
+  </div>
+
+  <div class="layers reveal" id="layers" role="group" aria-label="Site map layers">
+    <button type="button" class="on" data-l="overview">Overview</button>
+    <button type="button" data-l="power">Power</button>
+    <button type="button" data-l="water">Water</button>
+    <button type="button" data-l="road">Road and access</button>
+    <button type="button" data-l="fibre">Fibre</button>
+    <button type="button" data-l="growth">Room to grow</button>
+  </div>
+  <div class="mapwrap reveal">
+    <div class="map">
+      <svg viewBox="0 0 800 480" role="img" aria-label="Schematic map of the site: highway to the north, plot in the west, dam and river to the east and south-east">
+        <defs><pattern id="gr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#18232d" stroke-width="1"/></pattern></defs>
+        <rect width="800" height="480" fill="url(#gr)"/>
+        <!-- water -->
+        <path id="dam" class="base" d="M600 250 C650 200 740 190 800 210 L800 480 L430 480 C470 440 520 450 560 410 C600 370 560 300 600 250Z" fill="#12333b" stroke="#1f5964" stroke-width="2"/>
+        <text x="650" y="360" fill="#6fb4c0" font-size="14" font-family="JetBrains Mono,monospace">Mahiravani Dam</text>
+        <text x="650" y="380" fill="#6fb4c0" font-size="12" font-family="JetBrains Mono,monospace">and river</text>
+        <!-- road -->
+        <path id="road" d="M0 78 L800 38" stroke="#2b3947" stroke-width="30" fill="none"/>
+        <path d="M0 78 L800 38" stroke="#46586a" stroke-width="2" stroke-dasharray="14 12" fill="none"/>
+        <text x="420" y="30" fill="#8fa1b1" font-size="12" font-family="JetBrains Mono,monospace" transform="rotate(-2.6 420 30)">Nashik-Trimbak Road</text>
+        <!-- neighbour -->
+        <rect x="440" y="104" width="120" height="74" rx="6" fill="#16212b" stroke="#2a3a48"/>
+        <text x="500" y="146" fill="#8fa1b1" font-size="12" text-anchor="middle" font-family="JetBrains Mono,monospace">Anand Resort</text>
+        <!-- plot -->
+        <polygon id="plot" points="60,92 410,76 416,258 340,392 184,414 92,334 60,206" fill="rgba(94,234,212,.12)" stroke="#5eead4" stroke-width="3"/>
+        <text x="236" y="190" fill="#e8edf2" font-size="22" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="600">9.25 acres</text>
+        <text x="236" y="214" fill="#8fa1b1" font-size="12" text-anchor="middle" font-family="JetBrains Mono,monospace">Gat No. 17 &middot; NA land</text>
+        <!-- power -->
+        <g class="lyr" data-l="power">
+          <circle cx="236" cy="250" r="190" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 8"/>
+          <text x="236" y="452" fill="#fbbf24" font-size="12" text-anchor="middle" font-family="JetBrains Mono,monospace">MSEDCL substation within 1 km (not to scale)</text>
+          <circle cx="236" cy="262" r="10" fill="#fbbf24"/>
+          <circle class="pulse" cx="236" cy="262" r="10" fill="none" stroke="#fbbf24" stroke-width="2"/>
+          <text x="256" y="268" fill="#fbbf24" font-size="13" font-family="JetBrains Mono,monospace">HT live on site</text>
+        </g>
+        <!-- water -->
+        <g class="lyr" data-l="water">
+          <path d="M600 300 C520 300 470 330 392 330" fill="none" stroke="#5eead4" stroke-width="3" class="flow"/>
+          <path d="M600 250 C650 200 740 190 800 210 L800 480 L430 480 C470 440 520 450 560 410 C600 370 560 300 600 250Z" fill="rgba(94,234,212,.22)" stroke="#5eead4" stroke-width="2"/>
+          <text x="480" y="318" fill="#5eead4" font-size="12" text-anchor="middle" font-family="JetBrains Mono,monospace">cooling water source</text>
+          <text x="480" y="338" fill="#8fa1b1" font-size="11" text-anchor="middle" font-family="JetBrains Mono,monospace">permission required</text>
+        </g>
+        <!-- road -->
+        <g class="lyr" data-l="road">
+          <path d="M60 86 L412 70" stroke="#5eead4" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <text x="236" y="126" fill="#5eead4" font-size="13" text-anchor="middle" font-family="JetBrains Mono,monospace">direct highway frontage</text>
+          <path d="M520 60 L780 48" stroke="#5eead4" stroke-width="3" fill="none" class="flow"/>
+          <text x="660" y="86" fill="#5eead4" font-size="12" text-anchor="middle" font-family="JetBrains Mono,monospace">to Nashik city, about 8 km</text>
+        </g>
+        <!-- fibre -->
+        <g class="lyr" data-l="fibre">
+          <path d="M520 54 L780 42" stroke="#fbbf24" stroke-width="3" fill="none" class="flow"/>
+          <circle cx="772" cy="43" r="8" fill="#fbbf24"/>
+          <text x="760" y="76" fill="#fbbf24" font-size="12" text-anchor="end" font-family="JetBrains Mono,monospace">Carrier PoPs: Nashik city and Satpur MIDC</text>
+          <text x="760" y="96" fill="#8fa1b1" font-size="11" text-anchor="end" font-family="JetBrains Mono,monospace">route to be confirmed</text>
+        </g>
+        <!-- growth -->
+        <g class="lyr" data-l="growth">
+          <polygon points="38,80 438,60 446,270 356,412 190,440 70,350 38,206" fill="none" stroke="#5eead4" stroke-width="2" stroke-dasharray="3 7"/>
+          <text x="236" y="462" fill="#5eead4" font-size="12" text-anchor="middle" font-family="JetBrains Mono,monospace">neighbouring landowners open to talks</text>
+        </g>
+      </svg>
+      <div class="cap">Schematic, not to scale. Site boundary approximate. <a href="https://maps.app.goo.gl/FZbfkgP6hTRuDggQ8" style="color:var(--accent)">Open the exact pin in Google Maps &rarr;</a></div>
+    </div>
+    <div class="info" id="info" aria-live="polite"></div>
+  </div>
+
+  <div class="why">
+    <div class="card reveal"><span class="ic">POWER READY</span><h3>Live HT on site</h3><p>Live HT connection on site, MSEDCL substation under 1 km away, MSEDCL letter already obtained.</p></div>
+    <div class="card reveal"><span class="ic">DEVELOPMENT READY</span><h3>Flat and hardstanding</h3><p>Flat, fully concreted hardstanding, already NA for commercial and industrial use. No conversion needed.</p></div>
+    <div class="card reveal"><span class="ic">WATER SECURE</span><h3>Dam and river behind</h3><p>Mahiravani Dam and river behind the plot, a strong source for cooling, subject to Water Resources Department permission.</p></div>
+    <div class="card reveal"><span class="ic">HIGHWAY FRONTAGE</span><h3>Nashik-Trimbak Road</h3><p>The plot sits directly on the Nashik-Trimbak Road, with easy heavy-vehicle access.</p></div>
+    <div class="card reveal"><span class="ic">CLEAN OWNERSHIP</span><h3>One point of contact</h3><p>Family-owned with clear, undisputed title and one point of contact for all discussions.</p></div>
+    <div class="card reveal"><span class="ic">ROOM TO GROW</span><h3>Expansion possible</h3><p>Neighbouring landowners are open to discussions about expanding the campus later, subject to agreement.</p></div>
+  </div>
+
+  <div class="fit reveal">
+    <div class="eyebrow">Best fit</div>
+    <h3 style="font-family:var(--serif);font-size:24px;margin:8px 0 4px">Indicatively 10 to 40 MW IT</h3>
+    <p style="color:#b4c1cd;font-size:15px">Subject to design and sanctioned load. Scale-up would use a dedicated feeder or intake, planned with MSEDCL and the operator.</p>
+    <div class="mw" aria-hidden="true"><i></i></div>
+    <div class="mwl"><span>0 MW</span><span>10 MW</span><span>40 MW</span></div>
+    <div class="chips"><span class="chip">Edge</span><span class="chip">Disaster recovery</span><span class="chip">Enterprise colocation</span><span class="chip">AI inference</span></div>
+  </div>
+
+  <div class="eyebrow reveal">Site details</div>
+  <div class="tabs reveal" id="tabs" role="tablist">
+    <button type="button" class="on" data-t="t1">Location and title</button>
+    <button type="button" data-t="t2">Site</button>
+    <button type="button" data-t="t3">Power</button>
+    <button type="button" data-t="t4">Water and connectivity</button>
+    <button type="button" data-t="t5">Commercial terms</button>
+  </div>
+  <div class="reveal">
+    <div class="tp on" id="t1"><dl class="dl">
+      <dt>Address</dt><dd>Gat No. 17, Mahiravani (Talegaon), beside Anand Resort, Nashik, Maharashtra</dd>
+      <dt>Area</dt><dd>9.25 acres (about 37,430 m&sup2; or 4.03 lakh sq ft), one contiguous plot</dd>
+      <dt>Land status</dt><dd>NA (Non-Agricultural): commercial and industrial</dd>
+      <dt>Ownership</dt><dd>Family-owned, single point of contact</dd>
+      <dt>Title</dt><dd>Clear and undisputed; 7/12 extract available</dd>
+      <dt>Industrial area</dt><dd>Satpur MIDC belt, Nashik</dd>
+      <dt>Nashik city</dt><dd>About 8 km</dd>
+      <dt>Mumbai</dt><dd>About 170 km by road</dd>
+    </dl></div>
+    <div class="tp" id="t2"><dl class="dl">
+      <dt>Terrain</dt><dd>Flat; no waterlogging</dd>
+      <dt>Surface</dt><dd>Fully concreted hardstanding</dd>
+      <dt>Shape</dt><dd>Anchor-shaped, broad frontage on the highway</dd>
+      <dt>Seismic zone</dt><dd>Zone III (Nashik)</dd>
+      <dt>Expansion</dt><dd>Adjacent landowners open to future expansion (subject to agreement)</dd>
+    </dl></div>
+    <div class="tp" id="t3"><dl class="dl">
+      <dt>Existing supply</dt><dd>Live HT connection on site</dd>
+      <dt>Substation</dt><dd>MSEDCL substation under 1 km from the site</dd>
+      <dt>Utility letter</dt><dd>MSEDCL letter obtained (in hand). Copy shared on request.</dd>
+      <dt>Scale-up</dt><dd>Dedicated feeder or intake for higher loads, planned with MSEDCL and the operator</dd>
+    </dl></div>
+    <div class="tp" id="t4"><dl class="dl">
+      <dt>Water</dt><dd>Mahiravani Dam and river behind the plot. Drawal subject to Water Resources Department permission.</dd>
+      <dt>Road</dt><dd>Direct frontage on the Nashik-Trimbak Road</dd>
+      <dt>Fibre</dt><dd>Carrier PoPs in Nashik city and Satpur MIDC; fibre-dense Mumbai-Nashik corridor. Carrier route confirmation to be obtained.</dd>
+    </dl></div>
+    <div class="tp" id="t5"><dl class="dl">
+      <dt>Structure</dt><dd>Long-term lease (15 to 30 years) or joint development: flexible</dd>
+      <dt>Commercials</dt><dd>To be discussed</dd>
+      <dt>Availability</dt><dd>2028, on expiry of the current contract; fits the design and approvals cycle</dd>
+      <dt>Incentives</dt><dd>Statewide Green Data Centre Parks policy (GR 9 June 2026) and IT/ITES Policy 2023, for eligible operators</dd>
+    </dl></div>
+  </div>
+
+  <div class="eyebrow reveal" style="margin-top:38px">Documents available on request</div>
+  <div class="docs reveal">
+    <div>7/12 extract (latest)</div><div>NA conversion details</div><div>MSEDCL letter</div><div>Site map, GPS location and photographs</div><div>Site visit on request</div>
+  </div>
+
+  <div class="owner reveal">
+    <div><h3>Aditya Bharat Date</h3><p>Owner and representative, on behalf of the family.<br>WhatsApp or phone: +91 95112 58124 &middot; dateaditya.1@gmail.com</p></div>
+    <div class="cta"><a class="btn p" href="https://wa.me/919511258124">WhatsApp</a><a class="btn" href="mailto:dateaditya.1@gmail.com">Email</a><a class="btn" href="https://maps.app.goo.gl/FZbfkgP6hTRuDggQ8">Google Maps pin</a></div>
+  </div>
+  <p class="fine reveal">Information is indicative and given in good faith for preliminary discussion with prospective lessees, development partners and their advisors. It is subject to verification, due diligence and definitive documentation. The site boundary is approximate. Nothing on this page constitutes an offer or a binding commitment. Prepared October 2026.</p>
 </div></section>
 
 <section id="skills"><div class="wrap">
@@ -283,6 +499,44 @@ body[data-mode="investor"] .only-recruiter{display:none}
   }
   size();draw(0);
   window.addEventListener('resize',function(){size();if(reduce)draw(0)});
+})();
+</script>
+<script>
+(function(){
+  var L={
+   overview:{t:'Site overview',s:'Preliminary',w:0,l:['9.25 acres, one contiguous plot, NA for commercial and industrial use','Flat, fully concreted hardstanding with no waterlogging','Live HT connection on site; MSEDCL substation under 1 km','Highway frontage; Mahiravani Dam and river behind the plot','Available from 2028 for long-term lease or joint development']},
+   power:{t:'Power',s:'MSEDCL letter in hand',w:0,l:['Live HT connection on site','MSEDCL substation under 1 km from the site','MSEDCL letter obtained; copy shared on request','Dedicated feeder or intake for higher loads, planned with MSEDCL and the operator']},
+   water:{t:'Water',s:'Permission required',w:1,l:['Mahiravani Dam and river directly behind the plot','A strong source for cooling','Drawal is subject to Water Resources Department permission']},
+   road:{t:'Road and access',s:'Direct frontage',w:0,l:['Direct frontage on the Nashik-Trimbak Road','Easy heavy-vehicle access','About 8 km to Nashik city centre and about 170 km to Mumbai by road','Satpur MIDC industrial belt, Nashik']},
+   fibre:{t:'Fibre',s:'Route to be confirmed',w:1,l:['Carrier PoPs in Nashik city and Satpur MIDC','Fibre-dense Mumbai-Nashik corridor','Carrier route confirmation is still to be obtained']},
+   growth:{t:'Room to grow',s:'Subject to agreement',w:1,l:['Neighbouring landowners are open to discussions about expanding the campus','Any expansion is subject to agreement','Seismic zone III (Nashik)']}
+  };
+  var info=document.getElementById('info');
+  function show(k){
+    var d=L[k];
+    info.innerHTML='<h3>'+d.t+'</h3><span class="st'+(d.w?' warn':'')+'">'+d.s+'</span><ul>'+d.l.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>';
+    document.querySelectorAll('#layers button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===k)});
+    document.querySelectorAll('.lyr').forEach(function(g){g.classList.toggle('show',g.getAttribute('data-l')===k)});
+  }
+  document.querySelectorAll('#layers button').forEach(function(b){b.onclick=function(){show(b.getAttribute('data-l'))}});
+  show('overview');
+  document.querySelectorAll('#tabs button').forEach(function(b){b.onclick=function(){
+    document.querySelectorAll('#tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.tp').forEach(function(p){p.classList.toggle('on',p.id===b.getAttribute('data-t'))});
+  }});
+  // count-up
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return; co.unobserve(e.target);
+    var el=e.target,to=parseFloat(el.getAttribute('data-count')),dec=+(el.getAttribute('data-dec')||0),from=parseFloat(el.getAttribute('data-from')||0);
+    if(reduce)return;
+    var t0=performance.now();
+    (function f(t){var p=Math.min(1,(t-t0)/1200),v=from+(to-from)*(1-Math.pow(1-p,3));el.textContent=v.toFixed(dec);if(p<1)requestAnimationFrame(f)})(t0);
+  })},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el)});
+  // direct investor link: /#investor or /#land
+  function fromHash(){var h=location.hash;if(h==='#investor'||h==='#land'){document.getElementById('mI').click();if(h==='#investor'){window.scrollTo(0,0)}}}
+  fromHash();window.addEventListener('hashchange',fromHash);
 })();
 </script>
 </body>
